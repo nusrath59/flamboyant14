@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<title>Alumni Profiles</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo.png" class="h-9" alt="Logo">
+      <span class="font-bold">XYZ College</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <a href="alumni.html" class="hover:text-yellow-400">Alumni</a>
+      <a href="gallery.html" class="hover:text-yellow-400">Gallery</a>
+      <a href="register.html" class="hover:text-yellow-400">Register</a>
+    </div>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-blue-800 px-4 pb-4">
+    <a href="index.html" class="block py-2">Home</a>
+    <a href="alumni.html" class="block py-2">Alumni</a>
+    <a href="gallery.html" class="block py-2">Gallery</a>
+    <a href="register.html" class="block py-2">Register</a>
+  </div>
+  <button id="darkToggle" class="ml-4 text-xl">🌙</button>
+
+</nav>
+
+<script>
+  document.getElementById("menuBtn").onclick = () =>
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+</script>
+<div class="flex flex-col md:flex-row gap-4 mb-6">
+  <input id="searchInput" placeholder="Search name or company"
+    class="w-full p-3 rounded border">
+
+  <select id="batchFilter" class="p-3 rounded border">
+    <option value="">All Batches</option>
+    <option value="2015">2015</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+  </select>
+</div>
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <h2 class="text-3xl font-bold text-center mb-8">Our Distinguished Alumni</h2>
+
+  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    
+    <!-- Card -->
+    <div class="alumni-card" data-name="rahul" data-company="google" data-batch="2018">
+      <img src="images/alumni1.jpg" loading="lazy">
+      <h3>Rahul Sharma</h3>
+      <p>Batch of 2018</p>
+      <span>Software Engineer, Google</span>
+      <a href="https://docs.google.com/forms/d/e/YOUR_MENTORSHIP_FORM/viewform"
+   target="_blank"
+   class="mt-2 inline-block bg-green-600 text-white px-4 py-1 rounded-full text-sm">
+   Request Mentorship
+</a>
+
+    </div>
+
+    <div class="alumni-card" data-name="rahul" data-company="google" data-batch="2018">
+      <img src="images/alumni2.jpg" loading="lazy">
+      <h3>Ananya Patel</h3>
+      <p>Batch of 2017</p>
+      <span>Product Manager, Amazon</span>
+      <a href="https://docs.google.com/forms/d/e/YOUR_MENTORSHIP_FORM/viewform"
+   target="_blank"
+   class="mt-2 inline-block bg-green-600 text-white px-4 py-1 rounded-full text-sm">
+   Request Mentorship
+</a>
+
+    </div>
+
+    <div class="alumni-card" data-name="rahul" data-company="google" data-batch="2018">
+      <img src="images/alumni3.jpg" loading="lazy">
+      <h3>Vikram Singh</h3>
+      <p>Batch of 2015</p>
+      <span>Founder, TechStart</span>
+      <a href="https://docs.google.com/forms/d/e/YOUR_MENTORSHIP_FORM/viewform"
+   target="_blank"
+   class="mt-2 inline-block bg-green-600 text-white px-4 py-1 rounded-full text-sm">
+   Request Mentorship
+</a>
+
+    </div>
+
+  </div>
+</section>
+<section class="mt-16">
+  <h3 class="text-xl font-bold text-center mb-4">
+    Are You an Alumni? Submit Your Profile
+  </h3>
+
+  <iframe
+    src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+    width="100%" height="800" frameborder="0">
+  </iframe>
+</section>
+
+<footer class="bg-blue-900 text-white text-center p-4">
+  © 2026 XYZ College Alumni Association
+</footer>
+
+</body>
+</html>
